@@ -23,13 +23,13 @@ The main code you can find under /src/main/java/com/example/demo/
 
 To basically run the program there is a dedicated start.sh script where a couple of commands are implemented:
 
-	- First we build the project with `mvn clean install` 
+- First we build the project with `mvn clean install` 
 
-	- Then we are creating an image with `docker build` (there is a /demo/Dockerfile for this)
+- Then we are creating an image with `docker build` (there is a /demo/Dockerfile for this)
 
-	- `kubectl apply -f` is looking into the yaml (some configurations are located there, for example here we have 2 containers to be on the safe side) file and doing the deployment
+- `kubectl apply -f` is looking into the yaml (some configurations are located there, for example here we have 2 containers to be on the safe side) file and doing the deployment
 
-	- `kubectl expose` Create a Service object that exposes the deployment
+- `kubectl expose` Create a Service object that exposes the deployment
 
 
 Two different ways are implemented to multiply and can be used by different urls:
