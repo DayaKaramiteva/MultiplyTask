@@ -16,7 +16,7 @@ public class MultiplyController {
 
         BigInteger mult = a.multiply(b);
 
-        return "BigInteger implementation result is " + mult;
+        return "BigInteger implementation result is " + mult + "\n";
     }
 
     @RequestMapping(value = "/multiply/{num1}/{num2}")
