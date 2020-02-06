@@ -7,7 +7,7 @@ To run the project follow these commands:
 
 `git clone https://github.com/DayaKaramiteva/MultiplyTask.git`
 
-`cd demo`
+`cd MultiplyTask/demo`
 
 `./start.sh`
 
