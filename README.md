@@ -4,6 +4,7 @@
 
 Multiplying two big numbers.
 To run the project follow these commands:
+
 `git clone https://github.com/DayaKaramiteva/MultiplyTask.git`
 
 `cd demo`
@@ -46,4 +47,10 @@ The approach used in this solution is to keep only one array for result. We trav
 
   ### Example
   `curl http://localhost:8080/multiplybigint/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your choice 
+  
+  You can also type this in the web browser url:
+  
+  `http://localhost:8080/multiply/-15/78`
+  
+  
    
