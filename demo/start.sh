@@ -1,6 +1,8 @@
 #!/bin/bash
 # execute ./start.sh from the root dir of the project
+
 logfile="./log/bootstrap.log"
+
 function catch_error () {
     if [ $1 -ne 0 ]
     then
@@ -8,24 +10,29 @@ function catch_error () {
         exit 1
     fi
 }
+
 function create_log {
     if [[ ! -e $logfile ]]; then
         mkdir -p ./log
         touch $logfile
     else
-        :"$logfile"
+        :> "$logfile"
     fi
 }
+
 function build_maven {
     mvn clean install >> "$logfile" 2>&1
 }
+
 function container_ops {
     docker build -t dayanak/multi-task . >> "$logfile" 2>&1
 }
+
 function k8s_setup {
     kubectl apply -f multitask.yaml >> "$logfile" 2>&1
     kubectl expose deployment multi-task --type=LoadBalancer --port=8080 >> "$logfile" 2>&1
 }
+
 function run_app {
     printf "Truncating log file ...\n"
     create_log
@@ -40,4 +47,5 @@ function run_app {
     k8s_setup
     catch_error $? "$_"
 }
+
 run_app
