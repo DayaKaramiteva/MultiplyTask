@@ -59,6 +59,7 @@ i.e. `curl http://localhost:12345/multiplybigint/5/-6543245678`
 
   #### Example (Algorithm)
   `curl http://localhost:LOCAL_PORT_CHOICE/multiply/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your big number choices
+  i.e. `curl http://localhost:12345/multiply/5/-6543245678`
   
   You can also type this in the web browser url:
   
