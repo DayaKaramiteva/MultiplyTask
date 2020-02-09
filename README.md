@@ -2,6 +2,11 @@
   
 The implementation contains an algorithm for multiplication of big numbers represented as strings. The logic is exposed as a REST service using Spring Boot. The service accepts as an input the two big number strings and returns the multiplication result. The REST service is also deployed on K8s.
 
+Requirements:
+  - Java
+  - Maven
+  - Kubernetes
+  - Running K8s Cluster
 
 # Usage
 
@@ -16,10 +21,6 @@ To run the project follow these commands:
 
 `./start.sh`
 
-Requirements:
-  - Java
-  - Maven
-  - Kubernetes
 
 The main code you can find under /src/main/java/com/example/demo/
   - MultiplyApplication.java
