@@ -52,6 +52,9 @@ This can be done by these commands:
 #### Example (BigInteger)
 `curl http://localhost:LOCAL_PORT_CHOICE/multiplybigint/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your your big number choices 
 i.e. `curl http://localhost:12345/multiplybigint/5/-6543245678`
+
+The result should be:
+BigInteger implementation result is -32716228390
   
 2. The second implementation is using an end to end implemented algorithm: 
   
@@ -60,6 +63,9 @@ i.e. `curl http://localhost:12345/multiplybigint/5/-6543245678`
   #### Example (Algorithm)
   `curl http://localhost:LOCAL_PORT_CHOICE/multiply/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your big number choices
   i.e. `curl http://localhost:12345/multiply/5/-6543245678`
+  
+  Тhe result should be:
+  Algorithm implementation result is: -32716228390  
   
   You can also type this in the web browser url:
   
