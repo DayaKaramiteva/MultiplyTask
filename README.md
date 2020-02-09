@@ -34,12 +34,12 @@ To run the program there is a dedicated start.sh script where a couple of comman
 
 - `kubectl apply -f` is looking into the yaml (some configurations are located there) file and doing the deployment
 
-- `kubectl expose` Create a Service object that exposes the deployment
+- `kubectl expose` creates a Service object that exposes the deployment
 
 
 Two different multiplying implementations are available and can be used by different urls:
 
-Before stepping into the requestswe should create a port forwarding between a dedicated port on our localhost(LOCAL_PORT_CHOICE) and the dedicated port on the pod(the containerPort specified in the multitask.yaml in our case 8080). 
+Before stepping into the requests we should create a port forwarding between a dedicated port on our localhost(LOCAL_PORT_CHOICE) and the dedicated port on the pod(the containerPort specified in the multitask.yaml - in our case 8080). 
 
 This can be done by these commands:
 
@@ -49,17 +49,16 @@ This can be done by these commands:
 
 1. The first implementation is using the BigInteger java class which is spesialized in mathematical operations with big numbers. 
    For this one you can type:
-### Example
-`curl http://localhost:LOCAL_PORT_CHOICE/multiplybigint/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your choice 
+#### Example (BigInteger)
+`curl http://localhost:LOCAL_PORT_CHOICE/multiplybigint/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your your big number choices 
+i.e. `curl http://localhost:12345/multiplybigint/5/-6543245678`
   
-2. The second implementation is using an end to end implemented algorithm. 
+2. The second implementation is using an end to end implemented algorithm: 
   
-  We start from the last digit of second number multiply it with first number. Then we multiply second digit of second number with first number, and so on. We add all these multiplications. While adding, we put i-th multiplication shifted.
+  We start from the last digit of the second number and multiply it with the whole first number. Then we multiply the second digit of the second number with the whole first number, and so on. After that we are summing up all the results of these multiplications. While summing up, we are putting the i-th multiplication shifted. With each iterration we are keeping the current iterration multiplication result in an array with a reversed order.
 
-The approach used in this solution is to keep only one array for result. We traverse all digits first and second numbers in a loop and add the result at appropriate position.
-
-  ### Example
-  `curl http://localhost:LOCAL_PORT_CHOICE/multiply/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your choice 
+  #### Example (Algorithm)
+  `curl http://localhost:LOCAL_PORT_CHOICE/multiply/NUMBER1/NUMBER2` where NUMBER1 and NUMBER2 are your big number choices
   
   You can also type this in the web browser url:
   
