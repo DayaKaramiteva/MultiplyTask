@@ -25,7 +25,7 @@ function k8s_setup {
     kubectl get deployment multi-task > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         kubectl apply -f multitask.yaml >> "$logfile" 2>&1
-        kubectl expose deployment multi-task --type=LoadBalancer --port=8080 >> "$logfile" 2>&1
+        kubectl expose deployment multi-task --type=NodePort --port=8080 >> "$logfile" 2>&1
     fi
 }
 function run_app {
