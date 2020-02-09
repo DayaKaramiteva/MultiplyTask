@@ -9,6 +9,8 @@ To run the project follow these commands:
 
 `cd MultiplyTask/demo`
 
+`chmod +x start.sh`
+
 `./start.sh`
 
 Requirements:
