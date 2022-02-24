@@ -1,5 +1,7 @@
 # MultiplyTask
   
+Implementation:
+
 The implementation contains an algorithm for multiplication of big numbers represented as strings. The logic is exposed as a REST service using Spring Boot. The service accepts as an input the two big number strings and returns the multiplication result. The REST service is also deployed on K8s.
 
 Requirements:
